@@ -29,6 +29,7 @@ export class DemoController {
     // Delete请求携带Query参数
     @Delete("/deleteuser/:name")
     deleteUserParam(@Param('name') name: string) {
+        console.log("测试hot reload,q,1")
         return this.demoService.deleteUserParam(name);
     }
     // Patch请求
@@ -36,6 +37,7 @@ export class DemoController {
     updateUser(@Body() userdata: updateuser) {
         return this.demoService.updateUser(userdata.NewName, userdata.OldName)
     }
+
 
 
 }
