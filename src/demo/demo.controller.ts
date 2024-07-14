@@ -2,6 +2,7 @@ import { Body, Param, Controller, Delete, Get, Post, Patch } from '@nestjs/commo
 import { DemoService } from './demo.service';
 import { adduser, updateuser } from "./types/index"
 import * as config from 'config'
+import { ConfigEnum } from '../../config/enum/config.enum'
 @Controller('demo')
 export class DemoController {
     constructor(private demoService: DemoService) {
@@ -12,7 +13,7 @@ export class DemoController {
     getUserlist() {
         // 测试配置文件的读取
         const server = config.get('server');
-        console.log("读取到配置了😄：", server);
+        console.log("读取到配置了😄：", server[ConfigEnum.DB_TYPE]);
         return this.demoService.getUserlist()
     }
     // Get请求携带Query参数

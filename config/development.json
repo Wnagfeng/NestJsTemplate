@@ -1,8 +1,9 @@
 {
     "server": {
-        "port": 3001,
-        "host": "localhost",
-        "username": "test",
-        "password": "test"
+        "DB_HOST": "localhost",
+        "DB_PORT": 3306,
+        "DB_USERNAME": "root",
+        "DB_PASSWORD": "123321",
+        "DB_DATABASE": "test"
     }
 }

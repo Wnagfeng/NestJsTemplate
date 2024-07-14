@@ -8,7 +8,7 @@
 ## 1.功能列表
 
 - [x] 已配置热重载(优化您的开发体验)
-- [ ] 多环境配置(测试、生产、数据库....)
+- [x] 多环境配置Config文件(测试、生产、数据库....)
 - [ ] 接口文档、接口请求安全&性能
 - [ ] 用户、权限、菜单、日志...
 
@@ -52,3 +52,36 @@
 }
 ````
 
+ TypeOrmModule.forRootAsync(
+
+  {
+
+   imports: [],
+
+   inject: [],
+
+   useFactory: () => ({
+
+​    type: server.ConfigEnum.DB_TYPE,
+
+​    host: server.ConfigEnum.DB_HOST,
+
+​    port: server.ConfigEnum.DB_PORT,
+
+​    username: server.ConfigEnum.DB_USERNAME,
+
+​    password: server.ConfigEnum.DB_PASSWORD,
+
+​    database: server.ConfigEnum.DB_DATABASE,
+
+​    entities: [],
+
+​    synchronize: true,//同步本地schema到数据库(初始化的时候使用)
+
+​    logging: ["error"],
+
+   })
+
+  }
+
+ )
