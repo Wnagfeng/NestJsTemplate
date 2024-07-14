@@ -1,6 +1,7 @@
 import { Body, Param, Controller, Delete, Get, Post, Patch } from '@nestjs/common';
 import { DemoService } from './demo.service';
 import { adduser, updateuser } from "./types/index"
+import * as config from 'config'
 @Controller('demo')
 export class DemoController {
     constructor(private demoService: DemoService) {
@@ -9,6 +10,9 @@ export class DemoController {
     // Get请求
     @Get("/getuserlist")
     getUserlist() {
+        // 测试配置文件的读取
+        const server = config.get('server');
+        console.log("读取到配置了😄：", server);
         return this.demoService.getUserlist()
     }
     // Get请求携带Query参数
