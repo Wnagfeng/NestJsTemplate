@@ -1,14 +1,17 @@
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
-<div  class="box"  style="    display: flex;    justify-content: center;    align-items: center;    flex-direction: column; ">  <h1 align="center">Welcome to JoonStore 👋</h1> 
-     <h2 align="center"> 一款配置好的NestJs开发模板  😀</h2> 
+<div  class="box"  style="    display: flex;    justify-content: center;    align-items: center;    flex-direction: column; ">  <h1 align="center">Welcome to NestJsTemplate 👋</h1> 
+     <h2 align="center"> 一款开箱即用的NestJs开发模板  😀</h2> 
      <h2 align="center"> CoderJoon  🐂</h2>
+
 
 ## 1.功能列表
 
 - [x] 已配置热重载(优化您的开发体验)
 - [x] 多环境配置Config文件(测试、生产、数据库....)
+- [ ] 全局错误处理
+- [ ] Winston日志记录
 - [ ] 接口文档、接口请求安全&性能
 - [ ] 用户、权限、菜单、日志...
 
@@ -52,36 +55,3 @@
 }
 ````
 
- TypeOrmModule.forRootAsync(
-
-  {
-
-   imports: [],
-
-   inject: [],
-
-   useFactory: () => ({
-
-​    type: server.ConfigEnum.DB_TYPE,
-
-​    host: server.ConfigEnum.DB_HOST,
-
-​    port: server.ConfigEnum.DB_PORT,
-
-​    username: server.ConfigEnum.DB_USERNAME,
-
-​    password: server.ConfigEnum.DB_PASSWORD,
-
-​    database: server.ConfigEnum.DB_DATABASE,
-
-​    entities: [],
-
-​    synchronize: true,//同步本地schema到数据库(初始化的时候使用)
-
-​    logging: ["error"],
-
-   })
-
-  }
-
- )

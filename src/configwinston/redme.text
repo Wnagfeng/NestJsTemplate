@@ -1,0 +1,2 @@
+该文件用于配置winston日志模块
+在index.ts文件中，我们对于winsont进行了配置最终在main.ts中使用了该模块进行日志输出。
