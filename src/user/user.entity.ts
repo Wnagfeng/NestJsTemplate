@@ -2,7 +2,6 @@ import { Entity, Column, PrimaryGeneratedColumn, OneToMany, ManyToMany, JoinTabl
 import { Logs } from '../logs/logs.entity'
 import { Role } from '../roles/roles.entity';
 import { Profile } from './profile.entity';
-import { profile } from 'console';
 @Entity()
 export class User {
     @PrimaryGeneratedColumn()

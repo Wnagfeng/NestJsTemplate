@@ -5,6 +5,9 @@
         "DB_USERNAME": "root",
         "DB_PASSWORD": "123321",
         "DB_DATABASE": "test",
-        "PORT": 3000
+        "PORT": 3000,
+        "LOG_ON": "false",
+        "LOG_LEVEL": "info",
+        "LOG_SQL": "false"
     }
 }

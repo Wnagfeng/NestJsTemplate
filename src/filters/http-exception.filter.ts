@@ -8,7 +8,7 @@ import {
 
 @Catch(HttpException)
 export class HttpExceptionFilter implements ExceptionFilter {
-  constructor(private logger: LoggerService) {}
+  constructor(private logger: LoggerService) { }
   async catch(exception: HttpException, host: ArgumentsHost) {
     const ctx = host.switchToHttp();
     // 响应 请求对象

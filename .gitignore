@@ -1,4 +1,13 @@
 # compiled output
+.idea/
+.vscode/
+node_modules/
+build/
+tmp/
+temp/
+
+logs/
+
 /dist
 /node_modules
 /build

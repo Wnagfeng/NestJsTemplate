@@ -8,22 +8,25 @@
 
 ## 1.功能列表
 
-- [x] 已配置热重载(优化您的开发体验)
+- [ ] 已配置热重载(优化您的开发体验)
 - [x] 多环境配置Config文件(测试、生产、数据库....)
-- [ ] 全局错误处理
-- [ ] Winston日志记录
-- [ ] 接口文档、接口请求安全&性能
-- [ ] 用户、权限、菜单、日志...
+- [x] 全局错误处理
+- [x] Winston日志记录
 
+### 1.1已知问题
 
+想要使用热重载就别想自动导入entitys！
+
+想要使用自动导入entitys就别用热重载！
+
+如果您想配置热重载 你可以配置一个手动统一导入entitys，然后看一下我的博客教程！
+
+这里我为了能统一读取到src下面的entitys我就不配置热重载了
 
 ## 2.架构设计
 
-
 ![架构设计](https://github.com/Wnagfeng/NestJsTemplate/blob/main/imgs/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.png)
 ![架构设计1](https://github.com/Wnagfeng/NestJsTemplate/blob/main/imgs/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A12.jpg)
-
-
 
 ## 3.Debug方法：
 
